@@ -27,9 +27,10 @@ import org.exist.xquery.AbstractInternalModule;
 import org.exist.xquery.FunctionDef;
 
 /**
- * Module function definitions for a CQL parser.
+ * Module function definitions for a Contextual Query Language (CQL) parser.
  *
  * @author matej
+ * @author ljo
  *
  *
  */
@@ -62,7 +63,7 @@ public class CQLParserModule extends AbstractInternalModule {
     }
 
     public String getDescription() {
-        return "A module for a common query language (cql) parser";
+        return "A module for a Contextual Query Language (CQL) parser";
     }
 
     public String getReleaseVersion() {

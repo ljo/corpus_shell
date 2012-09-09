@@ -1,28 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <diagnostics>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="general-error">
-        <uri>info:srw/diagnostic/1/1</uri>
-        <message>General system error</message>
-        <detail>{$param}</detail>
-    </diagnostic>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-operation">
-        <uri>info:srw/diagnostic/1/4</uri>
-        <message>Unsupported operation</message>
-        <details>{$param}</details>
-    </diagnostic>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-param-value">
-        <uri>info:srw/diagnostic/1/6</uri>
-        <message>Unsupported parameter value</message>
-        <details>{$param}</details>
-    </diagnostic>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="param-missing">
-        <uri>info:srw/diagnostic/1/7</uri>
-        <message>Mandatory parameter not supplied</message>
-        <details>{$param}</details>
-    </diagnostic>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="query-syntax-error">
-        <uri>info:srw/diagnostic/1/10</uri>
-        <message>Query syntax error</message>
-        <details>{$param}</details>
-    </diagnostic>
+  <!-- General Diagnostics -->
+  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="general-error">
+    <uri>info:srw/diagnostic/1/1</uri>
+    <message>General system error</message>
+    <details>{$param}</details>
+  </diagnostic>
+  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-operation">
+    <uri>info:srw/diagnostic/1/4</uri>
+    <message>Unsupported operation</message>
+    <details>{$param}</details>
+  </diagnostic>
+  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-param-value">
+    <uri>info:srw/diagnostic/1/6</uri>
+    <message>Unsupported parameter value</message>
+    <details>{$param}</details>
+  </diagnostic>
+  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="param-missing">
+    <uri>info:srw/diagnostic/1/7</uri>
+    <message>Mandatory parameter not supplied</message>
+    <details>{$param}</details>
+  </diagnostic>
+  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-parameter"><uri>info:srw/diagnostic/1/8</uri>
+  <message>Unsupported Parameter</message>
+  <details>note 	Name of the unsupported parameter</details>
+  </diagnostic>
+  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="database-does-not-exist">
+    <uri>info:srw/diagnostic/1/235</uri>
+    <message>Database does not exist</message>
+    <details>note</details>
+  </diagnostic>
+  <!-- Diagnostics Relating to CQL -->
+  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="query-syntax-error">
+    <uri>info:srw/diagnostic/1/10</uri>
+    <message>Query syntax error</message>
+    <details>{$param}</details>
+  </diagnostic>
+  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-combination-of-indexes">
+    <uri>info:srw/diagnostic/1/18</uri>
+    <message>Unsupported combination of indexes</message>
+    <details> 	note 	Space delimited index names</details>
+  </diagnostic>
+  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-relation">
+    <uri>info:srw/diagnostic/1/19</uri>
+    <message>Unsupported relation</message>
+    <details> 	note 	Relation</details>
+  </diagnostic>
+  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-relation-modifier">
+    <uri>info:srw/diagnostic/1/20</uri>
+    <message>Unsupported relation modifier</message>
+    <details> 	note 	Value</details>
+  </diagnostic>
+  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-combination-of-relation-modifiers">
+    <uri>info:srw/diagnostic/1/21</uri>
+    <message>Unsupported combination of relation modifers</message>
+    <details> 	note 	Slash separated relation modifiers</details>
+  </diagnostic>
+  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-combination-of-relation-and-index">
+    <uri>info:srw/diagnostic/1/22</uri>
+    <message>Unsupported combination of relation and index</message>
+    <details> 	note 	Space separated index and relation</details>
+  </diagnostic>
+  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="too-many-characters-in-term">
+    <uri>info:srw/diagnostic/1/23</uri>
+    <message>Too many characters in term</message>
+    <details> 	note 	Length of longest term</details>
+  </diagnostic>
+  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-combination-of-relation-and-term">
+    <uri>info:srw/diagnostic/1/24</uri>
+    <message>Unsupported combination of relation and term</message>
+    <details> 	note 	Space separated relation and term</details>
+  </diagnostic>
+  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="deprecated-special-characters-not-quoted-in-term">
+    <uri>info:srw/diagnostic/1/25</uri>
+    <message>DEPRECATED. Special characters not quoted in term</message> 	
+    <details></details>
+  </diagnostic>
+  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="non-special-characters-escaped-in-term">
+    <uri>info:srw/diagnostic/1/26</uri>
+    <message>Non special character escaped in term</message>
+    <details> 	note 	Character incorrectly escaped</details>
+  </diagnostic>
+  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="empty-term-unsupported">
+    <uri>info:srw/diagnostic/1/27</uri>
+    <message>Empty term unsupported</message>
+    <details> 	note 	</details>
+  </diagnostic>
+  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="masking-character-not-supported">
+    <uri>info:srw/diagnostic/1/28</uri>
+    <message>Masking character not supported</message>
+    <details> 	note 	</details>
+  </diagnostic>
+  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="masked-words-too-short">
+    <uri>info:srw/diagnostic/1/29</uri>
+    <message>Masked words too short</message>
+    <details> 	note 	Minimum word length</details>
+  </diagnostic>
+  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="too-many-masking-characters-in-term">
+    <uri>info:srw/diagnostic/1/30</uri>
+    <message>Too many masking characters in term</message>
+    <details> 	note 	Maximum number supported</details>
+  </diagnostic>
+  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="anchoring-character-not-supported">
+    <uri>info:srw/diagnostic/1/31</uri>
+    <message>Anchoring character not supported</message>
+    <details> 	note 	</details>
+  </diagnostic>
+  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="anchoring-character-in-unsupported-position">
+    <uri>info:srw/diagnostic/1/32</uri>
+    <message>Anchoring character in unsupported position</message>
+    <details> 	note 	Character offset</details>
+  </diagnostic>
+  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="combination-of-proximity_adjacency-and-masking-characters-not-supported">
+    <uri>info:srw/diagnostic/1/33</uri>
+    <message>Combination of proximity/adjacency and masking characters not supported</message>
+    <details> 	note 	</details>
+  </diagnostic>
+  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="combination-of-proximity_adjacency-and-anchoring-characters-not-supported">
+    <uri>info:srw/diagnostic/1/34</uri>
+    <message>Combination of proximity/adjacency and anchoring characters not supported</message>
+    <details> 	note 	</details>
+  </diagnostic>
+  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="term-contains-only-stopwords">
+    <uri>info:srw/diagnostic/1/35</uri>
+      <message>Term contains only stopwords</message>
+      <details> 	note 	Value</details>
+  </diagnostic>
+  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="term-in-invalid-format-for-index-or-relation">
+    <uri>info:srw/diagnostic/1/36</uri>
+    <message>Term in invalid format for index or relation</message>
+    <details>note</details>
+  </diagnostic>
 </diagnostics>

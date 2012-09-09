@@ -36,6 +36,41 @@
     <message>Query syntax error</message>
     <details>{$param}</details>
   </diagnostic>
+  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="deprecated-unsupported-query-type">
+    <uri>info:srw/diagnostic/1/11</uri>
+    <message>DEPRECATED. Unsupported query type</message>
+    <details></details>
+  </diagnostic>
+  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="too-many-characters-in-query">
+    <uri>info:srw/diagnostic/1/12</uri>
+    <message>Too many characters in query</message>
+    <details>note 	Maximum supported</details>
+  </diagnostic>
+  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="invalid-or-unsupported-use-of-parentheses">
+    <uri>info:srw/diagnostic/1/13</uri>
+    <message>Invalid or unsupported use of parentheses</message>
+    <details>note 	Character offset to error</details>
+  </diagnostic>
+  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="invalid-or-unsupported-use-of-quotes">
+    <uri>info:srw/diagnostic/1/14</uri>
+    <message>Invalid or unsupported use of quotes</message>
+    <details> note 	Character offset to error</details>
+  </diagnostic>
+  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-context-set">
+    <uri>info:srw/diagnostic/1/15</uri>
+    <message>Unsupported context set</message>
+    <details> 	note 	URI or short name of context set</details>
+  </diagnostic>
+  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-index">
+    <uri>info:srw/diagnostic/1/16</uri>
+    <message>Unsupported index</message>
+    <details>note 	Name of index</details>
+  </diagnostic>
+  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="deprecated-unsupported-combination-of-index-and-index-set">
+    <uri>info:srw/diagnostic/1/17</uri>
+    <message>DEPRECATED. Unsupported combination of index and index set</message>
+    <details></details>
+  </diagnostic>
   <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-combination-of-indexes">
     <uri>info:srw/diagnostic/1/18</uri>
     <message>Unsupported combination of indexes</message>

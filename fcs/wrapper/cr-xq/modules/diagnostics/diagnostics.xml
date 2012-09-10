@@ -9,8 +9,8 @@
      $Id$
  -->
   <!-- General Diagnostics -->
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="general-error">
+  <diagnostic-list-item key="general-error">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/1</uri>
       <message>General system error</message>
       <details>{$param}</details>
@@ -18,8 +18,8 @@
     <details-note>The server returns this error when it is unable to supply a more specific diagnostic. The sever may also optionally supply debugging information.</details-note>
     <details-format>Debugging information (traceback)</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="system-temporarily-unavailable">
+  <diagnostic-list-item key="system-temporarily-unavailable">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/2</uri>
       <message>System temporarily unavailable</message>
       <details>{$param}</details>
@@ -28,8 +28,8 @@
     <details-format></details-format>
 
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="authentication-error">
+  <diagnostic-list-item key="authentication-error">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/3</uri>
       <message>Authentication error</message>
       <details>{$param}</details>
@@ -37,8 +37,8 @@
     <details-note>The request could not be processed due to lack of authentication.</details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-operation">
+  <diagnostic-list-item key="unsupported-operation">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/4</uri>
       <message>Unsupported operation</message>
       <details>{$param}</details>
@@ -46,8 +46,8 @@
     <details-note>Currently three operations are defined – searchRetrieve, explain, and scan. searchRetrieve and explain are mandatory, so this diagnostic would apply only to scan, or in SRU where an undefined operation is sent.</details-note>
     <details-format>Debugging information (traceback)</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-version">
+  <diagnostic-list-item key="unsupported-version">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/5</uri>
       <message>Unsupported version</message>
       <details>{$param}</details>
@@ -55,8 +55,8 @@
     <details-note>Currently only version 1.1 is defined and so this diagnostic has no meaning. In the future, when another version is defined, for example version 1.2, this diagnostic may be returned when the server receives a request where the version parameter indicates 1.2, and the server doesn't support version 1.2.</details-note>
     <details-format>Highest version supported</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-param-value">
+  <diagnostic-list-item key="unsupported-param-value">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/6</uri>
       <message>Unsupported parameter value</message>
       <details>{$param}</details>
@@ -64,8 +64,8 @@
     <details-note>This diagnostic might be returned for a searchRetrieve request which includes the recordPacking parameter with a value of 'xml', when the server does not support that value. The diagnostic might supply the name of parameter, in this case 'recordPacking'.</details-note>   
     <details-format>Name of parameter</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="param-missing">
+  <diagnostic-list-item key="param-missing">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/7</uri>
       <message>Mandatory parameter not supplied</message>
       <details>{$param}</details>
@@ -73,16 +73,17 @@
     <details-note>This diagnostic might be returned for a searchRetrieve request which omits the query parameter. The diagnostic might supply the name of missing parameter, in this case 'query'.</details-note>
     <details-format>Name of missing parameter</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-parameter"><uri>info:srw/diagnostic/1/8</uri>
-    <message>Unsupported Parameter</message>
+  <diagnostic-list-item key="unsupported-parameter">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
+      <uri>info:srw/diagnostic/1/8</uri>
+      <message>Unsupported Parameter</message>
     <details>{$param}</details>
     </diagnostic>
     <details-note>This diagnostic might be returned for a searchRetrieve request which includes the recordXPath parameter when the server does not support that parameter. The diagnostic might supply the name of unsupported parameter, in this case 'recordXPath'.</details-note>
     <details-format>Name of the unsupported parameter</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="database-does-not-exist">
+  <diagnostic-list-item key="database-does-not-exist">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/235</uri>
       <message>Database does not exist</message>
       <details>{$param}</details>
@@ -91,8 +92,8 @@
     <details-format></details-format>
   </diagnostic-list-item>
   <!-- Diagnostics Relating to CQL -->
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="query-syntax-error">
+  <diagnostic-list-item key="query-syntax-error">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/10</uri>
       <message>Query syntax error</message>
       <details>{$param}</details>
@@ -100,8 +101,8 @@
     <details-note>The query was invalid, but no information is given for exactly what was wrong with it. Eg. dc.title foo fish (The reason is that foo isn't a valid relation in the default context set, but the server isn't telling you this for some reason).</details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="deprecated-unsupported-query-type">
+  <diagnostic-list-item key="deprecated-unsupported-query-type">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/11</uri>
       <message>DEPRECATED. Unsupported query type</message>
       <details>{$param}</details>
@@ -109,8 +110,8 @@
     <details-note></details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="too-many-characters-in-query">
+  <diagnostic-list-item key="too-many-characters-in-query">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/12</uri>
       <message>Too many characters in query</message>
       <details>{$param}</details>
@@ -118,8 +119,8 @@
     <details-note>The length (number of characters) of the query exceeds the maximum length supported by the server.</details-note>
     <details-format>Maximum supported</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="invalid-or-unsupported-use-of-parentheses">
+  <diagnostic-list-item key="invalid-or-unsupported-use-of-parentheses">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/13</uri>
       <message>Invalid or unsupported use of parentheses</message>
       <details>{$param}</details>
@@ -127,8 +128,8 @@
     <details-note>The query couldn't be processed due to the use of parentheses. Typically either that they are mismatched, or in the wrong place. Eg. (((fish) or (sword and (b or ) c).</details-note>
     <details-format>Character offset to error</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="invalid-or-unsupported-use-of-quotes">
+  <diagnostic-list-item key="invalid-or-unsupported-use-of-quotes">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/14</uri>
       <message>Invalid or unsupported use of quotes</message>
       <details>{$param}</details>
@@ -136,8 +137,8 @@
     <details-note>The query couldn't be processed due to the use of quotes. Typically that they are mismatched Eg. "fish'.</details-note>
     <details-format>Character offset to error</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-context-set">
+  <diagnostic-list-item key="unsupported-context-set">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/15</uri>
       <message>Unsupported context set</message>
       <details>{$param}</details>
@@ -145,8 +146,8 @@
     <details-note>A context set given in the query isn't known to the server. Eg. foo.title any fish.</details-note>
     <details-format>URI or short name of context set</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-index">
+  <diagnostic-list-item key="unsupported-index">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/16</uri>
       <message>Unsupported index</message>
       <details>{$param}</details>
@@ -154,8 +155,8 @@
     <details-note>The index isn't known, possibly within a context set. Eg. dc.author any sanderson (dc has a creator index, not author).</details-note>
     <details-format>Name of index</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="deprecated-unsupported-combination-of-index-and-index-set">
+  <diagnostic-list-item key="deprecated-unsupported-combination-of-index-and-index-set">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/17</uri>
       <message>DEPRECATED. Unsupported combination of index and index set</message>
       <details>{$param}</details>
@@ -163,8 +164,8 @@
     <details-note></details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-combination-of-indexes">
+  <diagnostic-list-item key="unsupported-combination-of-indexes">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/18</uri>
       <message>Unsupported combination of indexes</message>
       <details>{$param}</details>
@@ -172,8 +173,8 @@
     <details-note>The particular use of indexes in a boolean query can't be processed. Eg. The server may not be able to do title queries merged with description queries.</details-note>
     <details-format>Space delimited index names</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-relation">
+  <diagnostic-list-item key="unsupported-relation">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/19</uri>
       <message>Unsupported relation</message>
       <details>{$param}</details>
@@ -181,8 +182,8 @@
     <details-note>A relation in the query is unknown or unsupported. Eg. The server can't handle 'within' searches for dates, but can handle equality searches.</details-note>
     <details-format>Relation</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-relation-modifier">
+  <diagnostic-list-item key="unsupported-relation-modifier">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/20</uri>
       <message>Unsupported relation modifier</message>
       <details>{$param}</details>
@@ -190,8 +191,8 @@
     <details-note>A relation modifier in the query is unknown or unsupported by the server. Eg. 'dc.title any/fuzzy starfish' when fuzzy isn't supported.</details-note>
     <details-format>Value</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-combination-of-relation-modifiers">
+  <diagnostic-list-item key="unsupported-combination-of-relation-modifiers">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/21</uri>
       <message>Unsupported combination of relation modifers</message>
       <details>{$param}</details>
@@ -199,8 +200,8 @@
     <details-note>Two (or more) relation modifiers can't be used together. Eg. dc.title any/cql.word/cql.string "star fish".</details-note>
     <details-format>Slash separated relation modifiers</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-combination-of-relation-and-index">
+  <diagnostic-list-item key="unsupported-combination-of-relation-and-index">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/22</uri>
       <message>Unsupported combination of relation and index</message>
       <details>{$param}</details>
@@ -208,8 +209,8 @@
     <details-note>While the index and relation are supported, they can't be used together. Eg. dc.author within "1 5".</details-note>
     <details-format>Space separated index and relation</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="too-many-characters-in-term">
+  <diagnostic-list-item key="too-many-characters-in-term">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/23</uri>
       <message>Too many characters in term</message>
       <details>{$param}</details>
@@ -217,8 +218,8 @@
     <details-note>The term is too long. Eg. The server may simply refuse to process a term longer than a given length.</details-note>
     <details-format>Length of longest term</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-combination-of-relation-and-term">
+  <diagnostic-list-item key="unsupported-combination-of-relation-and-term">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/24</uri>
       <message>Unsupported combination of relation and term</message>
       <details>{$param}</details>
@@ -226,8 +227,8 @@
     <details-note>The relation cannot be used to process the term. Eg. dc.title within "sanderson".</details-note>
     <details-format>Space separated relation and term</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="deprecated-special-characters-not-quoted-in-term">
+  <diagnostic-list-item key="deprecated-special-characters-not-quoted-in-term">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/25</uri>
       <message>DEPRECATED. Special characters not quoted in term</message> 	
       <details>{$param}</details>
@@ -235,8 +236,8 @@
     <details-note></details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="non-special-characters-escaped-in-term">
+  <diagnostic-list-item key="non-special-characters-escaped-in-term">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/26</uri>
       <message>Non special character escaped in term</message>
       <details>{$param}</details>
@@ -244,8 +245,8 @@
     <details-note>Characters may be escaped incorrectly Eg. "\a\r\n\s".</details-note>
     <details-format>Character incorrectly escaped</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="empty-term-unsupported">
+  <diagnostic-list-item key="empty-term-unsupported">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/27</uri>
       <message>Empty term unsupported</message>
       <details>{$param}</details>
@@ -253,8 +254,8 @@
     <details-note>Some servers do not support the use of an empty term for search or for scan. Eg. dc.title > "".</details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="masking-character-not-supported">
+  <diagnostic-list-item key="masking-character-not-supported">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/28</uri>
       <message>Masking character not supported</message>
       <details>{$param}</details>
@@ -262,8 +263,8 @@
     <details-note>A masking character given in the query is not supported. Eg. The server may not support * or ? or both.</details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="masked-words-too-short">
+  <diagnostic-list-item key="masked-words-too-short">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/29</uri>
       <message>Masked words too short</message>
       <details>{$param}</details>
@@ -271,8 +272,8 @@
     <details-note>The masked words are too short, so the server won't process them as they would likely match too many terms. Eg. dc.title any *.</details-note>
     <details-format>Minimum word length</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="too-many-masking-characters-in-term">
+  <diagnostic-list-item key="too-many-masking-characters-in-term">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/30</uri>
       <message>Too many masking characters in term</message>
       <details>{$param}</details>
@@ -280,8 +281,8 @@
     <details-note>The query has too many masking characters, so the server won't process them. Eg. dc.title any "???a*f??b* *a?".</details-note>
     <details-format>Maximum number supported</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="anchoring-character-not-supported">
+  <diagnostic-list-item key="anchoring-character-not-supported">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/31</uri>
       <message>Anchoring character not supported</message>
       <details>{$param}</details>
@@ -289,8 +290,8 @@
     <details-note>The server doesn't support the anchoring character (^). Eg. dc.title = "^jaws".</details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="anchoring-character-in-unsupported-position">
+  <diagnostic-list-item key="anchoring-character-in-unsupported-position">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/32</uri>
       <message>Anchoring character in unsupported position</message>
       <details>{$param}</details>
@@ -298,8 +299,8 @@
     <details-note>The anchoring character appears in an invalid part of the term, typically the middle of a word. Eg. dc.title any "fi^sh".</details-note>
     <details-format>Character offset</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="combination-of-proximity_adjacency-and-masking-characters-not-supported">
+  <diagnostic-list-item key="combination-of-proximity_adjacency-and-masking-characters-not-supported">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/33</uri>
       <message>Combination of proximity/adjacency and masking characters not supported</message>
       <details>{$param}</details>
@@ -307,8 +308,8 @@
     <details-note>The server cannot handle both adjacency (= relation for words) or proximity (the boolean) in combination with masking characters. Eg. dc.title = "this is a titl* fo? a b*k".</details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="combination-of-proximity_adjacency-and-anchoring-characters-not-supported">
+  <diagnostic-list-item key="combination-of-proximity_adjacency-and-anchoring-characters-not-supported">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/34</uri>
       <message>Combination of proximity/adjacency and anchoring characters not supported</message>
       <details>{$param}</details>
@@ -316,8 +317,8 @@
     <details-note>Similarly, the server cannot handle both adjacency (= relation for words) or proximity (the boolean) in combination with anchoring characters. Eg. dc.title = "^this is a title for a book".</details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="term-contains-only-stopwords">
+  <diagnostic-list-item key="term-contains-only-stopwords">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/35</uri>
       <message>Term contains only stopwords</message>
       <details>{$param}</details>
@@ -325,8 +326,8 @@
     <details-note>If the server does not index words such as 'the' or 'a', and the term consists only of these words, then while there may be records that match, the server cannot find any. Eg. dc.title any "the".</details-note>
     <details-format>Value</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="term-in-invalid-format-for-index-or-relation">
+  <diagnostic-list-item key="term-in-invalid-format-for-index-or-relation">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/36</uri>
       <message>Term in invalid format for index or relation</message>
       <details>{$param}</details>
@@ -334,8 +335,8 @@
     <details-note>This might happen when the index is of dates or numbers, but the term given is a word. Eg dc.date > "fish".</details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-boolean-operator">
+  <diagnostic-list-item key="unsupported-boolean-operator">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/37</uri>
       <message>Unsupported boolean operator</message>
       <details>{$param}</details>
@@ -343,8 +344,8 @@
     <details-note>For cases when the server does not support all of the boolean operators defined by CQL. The most commonly unsupported is Proximity, but could be used for NOT, OR or AND.</details-note>
     <details-format>Value</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="too-many-boolean-operators-in-query">
+  <diagnostic-list-item key="too-many-boolean-operators-in-query">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/38</uri>
       <message>Too many boolean operators in query</message>
       <details>{$param}</details>
@@ -352,8 +353,8 @@
     <details-note>There were too many search clauses given for the server to process.</details-note>
     <details-format>Maximum number supported</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="proximity-not-supported">
+  <diagnostic-list-item key="proximity-not-supported">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/39</uri>
       <message>Proximity not supported</message>
       <details>{$param}</details>
@@ -361,8 +362,8 @@
     <details-note>Proximity is not supported at all.</details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-proximity-relation">
+  <diagnostic-list-item key="unsupported-proximity-relation">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/40</uri>
       <message>Unsupported proximity relation</message>
       <details>{$param}</details>
@@ -370,8 +371,8 @@
     <details-note>The relation given for the proximity is unsupported. Eg. the server can only process = and > was given.</details-note>
     <details-format>Value</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-proximity-distance">
+  <diagnostic-list-item key="unsupported-proximity-distance">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/41</uri>
       <message>Unsupported proximity distance</message>
       <details>{$param}</details>
@@ -379,8 +380,8 @@
     <details-note>The distance was too big or too small for the server to handle, or didn't make sense. Eg. 0 characters or less than 100000 words.</details-note>
     <details-format>Value</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-proximity-unit">
+  <diagnostic-list-item key="unsupported-proximity-unit">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/42</uri>
       <message>Unsupported proximity unit</message>
       <details>{$param}</details>
@@ -388,8 +389,8 @@
     <details-note>The unit of proximity is unsupported, possibly because it is not defined.</details-note>
     <details-format>Value</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-proximity-ordering">
+  <diagnostic-list-item key="unsupported-proximity-ordering">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/43</uri>
       <message>Unsupported proximity ordering</message>
       <details>{$param}</details>
@@ -397,8 +398,8 @@
     <details-note>The server cannot process the requested order or lack thereof for the proximity boolean.</details-note>
     <details-format>Value</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-combination-of-proximity-modifiers">
+  <diagnostic-list-item key="unsupported-combination-of-proximity-modifiers">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/44</uri>
       <message>Unsupported combination of proximity modifiers</message>
       <details>{$param}</details>
@@ -406,8 +407,8 @@
     <details-note>While all of the modifiers are supported individually, this particular combination is not.</details-note>
     <details-format>Slash separated values</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="deprecated-prefix-assigned-to-multiple-identifiers">
+  <diagnostic-list-item key="deprecated-prefix-assigned-to-multiple-identifiers">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/45</uri>
       <message>DEPRECATED. Prefix assigned to multiple identifiers</message>
       <details>{$param}</details>
@@ -415,8 +416,8 @@
     <details-note></details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>	
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-boolean-modifier">
+  <diagnostic-list-item key="unsupported-boolean-modifier">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/46</uri>
       <message>Unsupported boolean modifier</message>
       <details>{$param}</details>
@@ -424,8 +425,8 @@
     <details-note>A boolean modifier on the request isn't supported.</details-note>
     <details-format>Value</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="cannot-process-query-reason-unknown">
+  <diagnostic-list-item key="cannot-process-query-reason-unknown">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/47</uri>
       <message>Cannot process query; reason unknown</message>
       <details>{$param}</details>
@@ -433,8 +434,8 @@
     <details-note>The server can't tell (or isn't telling) you why it can't execute the query, maybe it's a bad query or maybe it requests an unsupported capability.</details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>	 
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="query-feature-unsupported">
+  <diagnostic-list-item key="query-feature-unsupported">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/48</uri>
       <message>Query feature unsupported</message>
       <details>{$param}</details>
@@ -442,8 +443,8 @@
     <details-note>The server is able (contrast with 47) to tell you that something you asked for is not supported.</details-note>
     <details-format>Feature</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="masking-character-in-unsupported-position">
+  <diagnostic-list-item key="masking-character-in-unsupported-position">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/49</uri>
       <message>Masking character in unsupported position</message>
       <details>{$param}</details>
@@ -452,8 +453,8 @@
     <details-format>The rejected term</details-format>
   </diagnostic-list-item>
   <!-- Diagnostics Relating to Result Sets -->
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="result-sets-not-supported">
+  <diagnostic-list-item key="result-sets-not-supported">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/50</uri>
       <message>Result sets not supported</message>
       <details>{$param}</details>
@@ -461,8 +462,8 @@
     <details-note>The server cannot create a persistent result set.</details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>	
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="result-set-does-not-exist">
+  <diagnostic-list-item key="result-set-does-not-exist">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/51</uri>
       <message>Result set does not exist</message>
       <details>{$param}</details>
@@ -470,8 +471,8 @@
     <details-note>The client asked for a result set in the query which does not exist, either because it never did or because it had expired.</details-note>
     <details-format>Result set identifier</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="result-set-temporarily-unaavailable">
+  <diagnostic-list-item key="result-set-temporarily-unaavailable">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/52</uri>
       <message>Result set temporarily unavailable</message>
       <details>{$param}</details>
@@ -479,8 +480,8 @@
     <details-note>The result set exists, it cannot be accessed, but will be able to be accessed again in the future.</details-note>
     <details-format>Result set identifier</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="result-sets-only-supported-for-retrieval">
+  <diagnostic-list-item key="result-sets-only-supported-for-retrieval">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/53</uri>
       <message>Result sets only supported for retrieval</message>
       <details>{$param}</details>
@@ -488,8 +489,8 @@
     <details-note>Other operations on results apart from retrieval, such as sorting them or combining them, are not supported.</details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>	
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="deprecated-retrieval-may-only-occur-from-an-existing-result-set">
+  <diagnostic-list-item key="deprecated-retrieval-may-only-occur-from-an-existing-result-set">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/54</uri>
       <message>DEPRECATED. Retrieval may only occur from an existing result set</message>
       <details>{$param}</details>
@@ -497,8 +498,8 @@
     <details-note></details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="combination-of-result-sets-with-search-terms-not-supported">
+  <diagnostic-list-item key="combination-of-result-sets-with-search-terms-not-supported">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/55</uri>
       <message>Combination of result sets with search terms not supported</message>
       <details>{$param}</details>
@@ -506,8 +507,8 @@
     <details-note>Existing result sets cannot be combined with new terms to create new result sets. Eg. cql.resultsetid = foo not dc.title any fish.</details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>	
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="deprecated-only-combination-of-single-result-set-with-search-terms-supported">
+  <diagnostic-list-item key="deprecated-only-combination-of-single-result-set-with-search-terms-supported">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/56</uri>
       <message>DEPRECATED. Only combination of single result set with search terms supported</message>
       <details>{$param}</details>
@@ -515,8 +516,8 @@
     <details-note></details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="deprecated-result-set-created-but-no-records-available">
+  <diagnostic-list-item key="deprecated-result-set-created-but-no-records-available">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/57</uri>
       <message>DEPRECATED. Result set created but no records available</message>
       <details>{$param}</details>
@@ -524,8 +525,8 @@
     <details-note></details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="result-set-created-with-unpredictable-partial-results-available">
+  <diagnostic-list-item key="result-set-created-with-unpredictable-partial-results-available">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/58</uri>
       <message>Result set created with unpredictable partial results available</message>
       <details>{$param}</details>
@@ -533,8 +534,8 @@
     <details-note>The result set is not complete, possibly due to the processing being interupted mid way through. Some of the results may not even be matches.</details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>	
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="result-set-created-with-valid-partial-results-available">
+  <diagnostic-list-item key="result-set-created-with-valid-partial-results-available">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/59</uri>
       <message>Result set created with valid partial results available</message>
       <details>{$param}</details>
@@ -542,8 +543,8 @@
     <details-note>All of the records in the result set are matches, but not all records that should be there are.</details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>	
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="result-set-not-created-too-many-matching-records">
+  <diagnostic-list-item key="result-set-not-created-too-many-matching-records">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/60</uri>
       <message>Result set not created: too many matching records</message>
       <details>{$param}</details>
@@ -552,8 +553,8 @@
     <details-format>Maximum number</details-format>
   </diagnostic-list-item>
   <!-- Diagnostics Relating to Records -->
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="first-record-position-out-of-range">
+  <diagnostic-list-item key="first-record-position-out-of-range">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/61</uri>
       <message>First record position out of range</message>
       <details>{$param}</details>
@@ -561,8 +562,8 @@
     <details-note>For example, if the request matches 10 records, but the start position is greater than 10.</details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>	
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="deprecated-negative-number-of-records-requested">
+  <diagnostic-list-item key="deprecated-negative-number-of-records-requested">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/62</uri>
       <message>DEPRECATED. Negative number of records requested</message>
       <details>{$param}</details>
@@ -570,8 +571,8 @@
     <details-note></details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="deprecated-system-error-in-retrieving-records">
+  <diagnostic-list-item key="deprecated-system-error-in-retrieving-records">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/63</uri>
       <message>DEPRECATED. System error in retrieving records</message>
       <details>{$param}</details>
@@ -579,8 +580,8 @@
     <details-note></details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="record-temporarily-unavailable">
+  <diagnostic-list-item key="record-temporarily-unavailable">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/64</uri>
       <message>Record temporarily unavailable</message>
       <details>{$param}</details>
@@ -588,8 +589,8 @@
     <details-note>The record requested cannot be accessed currently, but will be able to be in the future.</details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>	
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="record-does-not-exist">
+  <diagnostic-list-item key="record-does-not-exist">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/65</uri>
       <message>Record does not exist</message>
       <details>{$param}</details>
@@ -597,8 +598,8 @@
     <details-note>The record does not exist, either because it never did, or because it has subsequently been deleted.</details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item> 	
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unknown-schema-for-retrieval">
+  <diagnostic-list-item key="unknown-schema-for-retrieval">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/66</uri>
       <message>Unknown schema for retrieval</message>
       <details>{$param}</details>
@@ -606,8 +607,8 @@
     <details-note>The record schema requested is unknown. Eg. the client asked for MODS when the server can only return simple Dublin Core.</details-note>
     <details-format>Schema URI or short name</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="record-not-available-in-this-schema">
+  <diagnostic-list-item key="record-not-available-in-this-schema">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/67</uri>
       <message>Record not available in this schema</message>
       <details>{$param}</details>
@@ -615,8 +616,8 @@
     <details-note>The record schema is known, but this particular record cannot be transformed into it.</details-note>
     <details-format>Schema URI or short name</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="not-authorised-to-send-record">
+  <diagnostic-list-item key="not-authorised-to-send-record">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/68</uri>
       <message>Not authorised to send record</message>
       <details>{$param}</details>
@@ -624,8 +625,8 @@
     <details-note>This particular record requires additional authorisation in order to receive it.</details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>	
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="not-authorised-to-send-record-in-this-schema">
+  <diagnostic-list-item key="not-authorised-to-send-record-in-this-schema">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/69</uri>
       <message>Not authorised to send record in this schema</message>
       <details>{$param}</details>
@@ -633,8 +634,8 @@
     <details-note>The record can be retrieved in other schemas, but the one requested requires futher authorisation.</details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>	
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="record-too-large-to-send">
+  <diagnostic-list-item key="record-too-large-to-send">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/70</uri>
       <message>Record too large to send</message>
       <details>{$param}</details>
@@ -642,8 +643,8 @@
     <details-note>The record is too large to send.</details-note>
     <details-format>Maximum record size</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unspupported-record-packing">
+  <diagnostic-list-item key="unspupported-record-packing">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/71</uri>
       <message>Unsupported record packing</message>
       <details>{$param}</details>
@@ -651,8 +652,8 @@
     <details-note>The server supports only one of string or xml, or the client requested a recordPacking which is unknown.</details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>	
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="xpath-retrieval-unsupported">
+  <diagnostic-list-item key="xpath-retrieval-unsupported">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/72</uri>
       <message>XPath retrieval unsupported</message>
       <details>{$param}</details>
@@ -660,8 +661,8 @@
     <details-note>The server does not support the retrieval of nodes from within the record.</details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>	
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="xpath-expression-contains-unsupported-feature">
+  <diagnostic-list-item key="xpath-expression-contains-unsupported-feature">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/73</uri>
       <message>XPath expression contains unsupported feature</message>
       <details>{$param}</details>
@@ -669,8 +670,8 @@
     <details-note>Some aspect of the XPath expression is unsupported. For example, the server might be able to process element nodes, but not functions.</details-note>
     <details-format>Feature</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unable-to-evaluate-xpath-expression">
+  <diagnostic-list-item key="unable-to-evaluate-xpath-expression">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/74</uri>
       <message>Unable to evaluate XPath expression</message>
       <details>{$param}</details>
@@ -679,8 +680,8 @@
     <details-format></details-format>
   </diagnostic-list-item>
   <!-- Diagnostics Relating to Sorting -->
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="sort-not-supported">
+  <diagnostic-list-item key="sort-not-supported">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/80</uri>
       <message>Sort not supported</message>
       <details>{$param}</details>
@@ -688,8 +689,8 @@
     <details-note>The server cannot perform any sort; that is the server only returns data in the default sequence.</details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>	
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="deprecated-unsupported-sort-type">
+  <diagnostic-list-item key="deprecated-unsupported-sort-type">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/81</uri>
       <message>DEPRECATED. Unsupported sort type</message>
       <details>{$param}</details>
@@ -697,8 +698,8 @@
     <details-note></details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-sort-sequence">
+  <diagnostic-list-item key="unsupported-sort-sequence">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/82</uri>
       <message>Unsupported sort sequence</message>
       <details>{$param}</details>
@@ -706,8 +707,8 @@
     <details-note>The particular sequence of sort keys is not supported, but the keys may be supported individually.</details-note>
     <details-format>Sequence</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="too-many-records-to-sort">
+  <diagnostic-list-item key="too-many-records-to-sort">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/83</uri>
       <message>Too many records to sort</message>
       <details>{$param}</details>
@@ -715,8 +716,8 @@
     <details-note>used when the server will only sort result sets under a certain size and the request returned a set larger than that limit.</details-note>
     <details-format>Maximum number supported</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="too-many-sort-keys-to-sort">
+  <diagnostic-list-item key="too-many-sort-keys-to-sort">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/84</uri>
       <message>Too many sort keys to sort</message>
       <details>{$param}</details>
@@ -724,8 +725,8 @@
     <details-note>The server can accept a sort statement within a request but cannot deliver as requested. Eg. the server can sort by a maximum of 2 keys only such as "title" and "date" but was requested to sort by "title", "author" and "date".</details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="deprecated-duplicate-sort-keys">
+  <diagnostic-list-item key="deprecated-duplicate-sort-keys">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/85</uri>
       <message>DEPRECATED. Duplicate sort keys</message>
       <details>{$param}</details>
@@ -733,8 +734,8 @@
     <details-note></details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="cannot-sort-incompatible-record-formats">
+  <diagnostic-list-item key="cannot-sort-incompatible-record-formats">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/86</uri>
       <message>Cannot sort: incompatible record formats</message>
       <details>{$param}</details>
@@ -742,8 +743,8 @@
     <details-note>The result set includes records in different schemas and there is insufficient commonality among the schemas to enable a sort.</details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>	
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-schema-for-sort">
+  <diagnostic-list-item key="unsupported-schema-for-sort">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/87</uri>
       <message>Unsupported schema for sort</message>
       <details>{$param}</details>
@@ -751,8 +752,8 @@
     <details-note>The server does not support sort for records in a particular schema. Eg. it supports sort for records in the DC schema but not in the ONIX schema.</details-note>
     <details-format>URI or short name of schema given</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-path-for-sort">
+  <diagnostic-list-item key="unsupported-path-for-sort">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/88</uri>
       <message>Unsupported path for sort</message>
       <details>{$param}</details>
@@ -760,8 +761,8 @@
     <details-note>The server can accept a sort statement within a request but cannot deliver as requested. Eg. the server can deliver in title or date sequence but subject was requested.</details-note>
     <details-format>XPath</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="path-unsupported-for-schema">
+  <diagnostic-list-item key="path-unsupported-for-schema">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/89</uri>
       <message>Path unsupported for schema</message>
       <details>{$param}</details>
@@ -769,8 +770,8 @@
     <details-note>The path given cannot be generated for the schema requested. For example asking for /record/fulltext within the simple Dublin Core schema.</details-note>
     <details-format>XPath</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-direction">
+  <diagnostic-list-item key="unsupported-direction">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/90</uri>
       <message>Unsupported direction</message>
       <details>{$param}</details>
@@ -778,8 +779,8 @@
     <details-note>The server can accept a sort statement within a request but cannot deliver as requested. Eg. the server can deliver in ascending only but descending was requested.</details-note>
     <details-format>Value</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-case">
+  <diagnostic-list-item key="unsupported-case">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/91</uri>
       <message>Unsupported case</message>
       <details>{$param}</details>
@@ -787,8 +788,8 @@
     <details-note>The server can accept a sort statement within a request but cannot deliver as requested. Eg. the server's index is single case so sorting case sensitive is unsupported.</details-note>
     <details-format>Value</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-missing-value-action">
+  <diagnostic-list-item key="unsupported-missing-value-action">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/92</uri>
       <message>Unsupported missing value action</message>
       <details>{$param}</details>
@@ -796,8 +797,8 @@
     <details-note>The server can accept a sort statement within a request but cannot deliver as requested. For example, the request includes a constant that the server should use where a record being sorted lacks the data field but the server cannot use the constant to override its normal behavior. Eg. sorting as a high value. </details-note>
     <details-format>Value</details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="sort-ended-due-to-missing-value">
+  <diagnostic-list-item key="sort-ended-due-to-missing-value">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/93</uri>
       <message>Sort ended due to missing value</message>
       <details>{$param}</details>
@@ -805,8 +806,8 @@
     <details-note>missingValue of ‘abort’.</details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>	 
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="sort-spec-included-both-in-query-and-protocol-query-prevails">
+  <diagnostic-list-item key="sort-spec-included-both-in-query-and-protocol-query-prevails">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/94</uri>
       <message>Sort spec included both in query and protocol: query prevails</message>
       <details>{$param}</details>
@@ -814,8 +815,8 @@
     <details-note></details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="sort-spec-included-both-in-query-and-protocol-protocol-prevails">
+  <diagnostic-list-item key="sort-spec-included-both-in-query-and-protocol-protocol-prevails">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/95</uri>
       <message>Sort spec included both in query and protocol: protocol prevails</message>
       <details>{$param}</details>
@@ -823,8 +824,8 @@
     <details-note></details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="sort-spec-included-both-in-query-and-protocol-error">
+  <diagnostic-list-item key="sort-spec-included-both-in-query-and-protocol-error">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/96</uri>
       <message>Sort spec included both in query and protocol: error</message>
       <details>{$param}</details>
@@ -833,8 +834,8 @@
     <details-format></details-format>
   </diagnostic-list-item>
   <!-- Diagnostics Relating to Explain -->
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="deprecated-explain-not-supported-use-4">
+  <diagnostic-list-item key="deprecated-explain-not-supported-use-4">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/100</uri>
       <message>DEPRECATED. Explain not supported (Use 4)</message>
       <details>{$param}</details>
@@ -842,8 +843,8 @@
     <details-note></details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="deprecated-explain-request-type-not-supported">
+  <diagnostic-list-item key="deprecated-explain-request-type-not-supported">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/101</uri>
       <message>DEPRECATED. Explain request type not supported</message>
       <details>{$param}</details>
@@ -851,8 +852,8 @@
     <details-note></details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>	
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="deprecated-explain-record-temporarily-unavailable-use-64">
+  <diagnostic-list-item key="deprecated-explain-record-temporarily-unavailable-use-64">	
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/102</uri>
       <message>DEPRECATED. Explain record temporarily unavailable (Use 64)</message>
       <details>{$param}</details>
@@ -861,8 +862,8 @@
     <details-format></details-format>
   </diagnostic-list-item>
   <!-- Diagnostics relating to Stylesheets -->
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="stylesheets-not-supported">
+  <diagnostic-list-item key="stylesheets-not-supported">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/110</uri>
       <message>Stylesheets not supported</message>
       <details>{$param}</details>
@@ -870,8 +871,8 @@
     <details-note>The SRU server does not support stylesheets, or a stylesheet was requested from an SRW server.</details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="unsupported-stylesheet">
+  <diagnostic-list-item key="unsupported-stylesheet">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/111</uri>
       <message>Unsupported stylesheet</message>
       <details>{$param}</details>
@@ -880,8 +881,8 @@
     <details-format>URL of stylesheet</details-format>
   </diagnostic-list-item>
   <!-- Diagnostics relating to Scan -->
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="response-position-out-of-range">
+  <diagnostic-list-item key="response-position-out-of-range">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/120</uri>
       <message>Response position out of range</message>
       <details>{$param}</details>
@@ -889,8 +890,8 @@
     <details-note>The request includes a position in response that is not valid for the list. For example a request indicates a response position = 15 and maximum terms = 20, meaning that it wants a response to include 15 entries before the term, plus the term, then another 4. The server would return this diagnostic if there were not 15 previous entries.</details-note>
     <details-format></details-format>
   </diagnostic-list-item>
-  <diagnostic-list-item>
-    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="too-many-terms-requested">
+  <diagnostic-list-item key="too-many-terms-requested">
+    <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/">
       <uri>info:srw/diagnostic/1/121</uri>
       <message>Too many terms requested</message>
       <details>{$param}</details>

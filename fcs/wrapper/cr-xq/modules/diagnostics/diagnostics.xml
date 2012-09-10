@@ -653,7 +653,7 @@
     <details-note></details-note>
     <details-format></details-format>
   </diagnostic>
-  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="deptecated-explain-request-type-not-supported">
+  <diagnostic xmlns="http://www.loc.gov/zing/srw/diagnostic/" key="deprecated-explain-request-type-not-supported">
     <uri>info:srw/diagnostic/1/101</uri>
     <message>DEPRECATED. Explain request type not supported</message>
     <details>{$param}</details>
